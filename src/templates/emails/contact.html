@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Confirmação de Mensagem</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      color: #333;
+      margin: 0;
+      padding: 0;
+      background-color: #f9f9f9;
+    }
+    .email-container {
+      max-width: 600px;
+      margin: 20px auto;
+      background: #ffffff;
+      border: 1px solid #dddddd;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    .email-header {
+      background-color: #0073e6;
+      color: #ffffff;
+      text-align: center;
+      padding: 20px;
+    }
+    .email-header h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .email-body {
+      padding: 20px;
+    }
+    .email-body p {
+      margin: 10px 0;
+    }
+    .email-body .message {
+      background-color: #f3f4f6;
+      padding: 10px;
+      border-left: 4px solid #0073e6;
+      font-style: italic;
+      color: #555;
+      white-space: pre-wrap; /* Keeps user line breaks */
+    }
+    .email-footer {
+      background-color: #f3f4f6;
+      text-align: center;
+      padding: 15px;
+      font-size: 14px;
+      color: #666;
+    }
+    .email-footer a {
+      color: #0073e6;
+      text-decoration: none;
+    }
+    .email-footer a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <div class="email-container">
+    <div class="email-header">
+      <h1>Obrigado pelo contato!</h1>
+    </div>
+    <div class="email-body">
+      <p>Olá, <strong>{{ name }}</strong>,</p>
+      <p>Fico feliz por ter nos procurado! Recebemos sua mensagem e assim que possível retornaremos seu contato. Segue abaixo uma cópia da mensagem que nos enviou para que você confira:</p>
+      <div class="message">
+        <p>{{ user_message }}</p>
+      </div>
+      <p>Caso tenha dúvidas ou perguntas, pode responder este mesmo email.</p>
+      <p>Atenciosamente,</p>
+      <p><strong>Empresa S/A</strong></p>
+    </div>
+    <div class="email-footer">
+      <p>Seu contato é de urgência? Mande uma mensagem para: <a href="mailto:seu_email@dominio.com">seu_email@dominio.com</a>.</p>
+      <p>Siga-me no <a href="https://www.instagram.com/" target="_blank">Instagram</a>.</p>
+    </div>
+  </div>
+</body>
+</html>

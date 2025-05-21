@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block title %}Meu site{% endblock %}
+
+{% block content %}
+<div class="flex flex-col justify-center items-center">
+    <div id="home-content" class="flex flex-col items-center w-full">
+        <section id="hero-section" class="relative mt-16">
+                {% include './includes/hero.html' %}
+            <div id="arrow-section-about"></div>
+        </section>
+    </div>
+</div>
+
+<script type="module" src="{{ static('js/home.js?version=4') }}"></script>
+{% endblock %}
