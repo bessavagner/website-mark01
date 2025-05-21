@@ -65,4 +65,19 @@
       transparent 90%
     );
   }
+  #glow-cards-1 {
+    background: radial-gradient(
+      circle at 80% 20%,
+      color-mix(in srgb, var(--color-accent) 90%, var(--color-primary)) 0%,
+      transparent 95%
+    );
+  }
+
+  #glow-cards-2 {
+    background: radial-gradient(
+      circle at 20% 80%,
+      color-mix(in srgb, var(--color-primary) 95%, transparent) 0%,
+      transparent 90%
+    );
+  }
 }
