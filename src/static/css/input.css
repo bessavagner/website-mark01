@@ -95,7 +95,25 @@
       transparent 90%
     );
   }
-  #glow-hero-1, #glow-hero-2, #glow-cards-1, #glow-cards-2, #glow-about-1, #glow-about-2 {
+  #glow-services-1 {
+    background: radial-gradient(
+      circle at 30% 70%,
+      color-mix(in srgb, var(--color-accent) 70%, var(--color-primary)) 0%,
+      transparent 90%
+    );
+  }
+
+  #glow-services-2 {
+    background: radial-gradient(
+      circle at 70% 30%,
+      color-mix(in srgb, var(--color-primary) 95%, transparent) 0%,
+      transparent 90%
+    );
+  }
+  #circle-services-1 {
+    @apply overflow-hidden;
+  }
+  #glow-hero-1, #glow-hero-2, #glow-cards-1, #glow-cards-2, #glow-about-1, #glow-about-2, #glow-services-1, #glow-services-2 {
     @apply overflow-hidden;
   }
   /* Círculo para ícones */
