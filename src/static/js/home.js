@@ -1,45 +1,26 @@
-document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function (e) {
-      e.preventDefault();
-      const target = document.querySelector(this.getAttribute("href"));
-      if (target) {
-        target.scrollIntoView({ behavior: "smooth" });
-      }
-    });
-  });
-  
-  const observerSobre = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
+document.addEventListener("DOMContentLoaded", () => {
+  const observer = new IntersectionObserver((entries, observerInstance) => {
+    entries.forEach((entry) => {
       if (entry.isIntersecting) {
-        const el = entry.target;
-        const anim = el.dataset.animate;
-        el.classList.remove("opacity-0");
-        el.classList.add(`animate-${anim}`);
-        observerSobre.unobserve(el); // roda apenas 1x
+        // Encontra todos os filhos animáveis dentro da seção
+        const animatables = entry.target.querySelectorAll("[data-animate-child]");
+
+        animatables.forEach((el, index) => {
+          el.style.opacity = "0";
+          el.style.animation = `fadeInUp 0.6s ease-out forwards`;
+          el.style.animationDelay = `${index * 0.1}s`;
+        });
+
+        // Só anima uma vez
+        observerInstance.unobserve(entry.target);
       }
     });
   }, {
-    threshold: 0.2,
+    threshold: 0.15, // quando 15% da seção aparecer
   });
-  
-  document.querySelectorAll("[data-animate]").forEach(el => observerSobre.observe(el));
-  
-  const observerCards = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const el = entry.target;
-        const anim = el.dataset.animate;
-        const delay = el.dataset.delay || '0';
-  
-        el.style.animationDelay = `${delay}s`;
-        el.classList.remove("opacity-0");
-        el.classList.add(`animate-${anim}`);
-        observerCards.unobserve(el);
-      }
-    });
-  }, {
-    threshold: 0.2,
+
+  // Observa todas as seções com o atributo
+  document.querySelectorAll("[data-animate-on-view]").forEach((section) => {
+    observer.observe(section);
   });
-  
-  document.querySelectorAll("[data-animate]").forEach(el => observerCards.observe(el));
-  
+});

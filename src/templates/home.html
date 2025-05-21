@@ -9,20 +9,20 @@
                 {% include './includes/hero.html' %}
             <div id="arrow-section-cards"></div>
         </section>
-        <section id="cards-section" class="relative -mt-20 md:mt-0">
+        <section id="cards-section" class="relative -mt-20 md:mt-0" data-animate-on-view>
                 {% include './includes/cards.html' %}
             <div id="arrow-section-about"></div>
         </section>
-        <section id="about-section" class="relative">
+        <section id="about-section" class="relative" data-animate-on-view>
                 {% include './includes/about.html' %}
             <div id="arrow-section-services"></div>
         </section>
-        <section id="services-section" class="relative">
+        <section id="services-section" class="relative" data-animate-on-view>
                 {% include './includes/services.html' %}
             <div id="arrow-section-contact"></div>
         </section>
     </div>
 </div>
 
-<script type="module" src="{{ static('js/home.js?version=4') }}"></script>
+<script type="module" src="{{ static('js/home.js?version=5') }}"></script>
 {% endblock %}
