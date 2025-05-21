@@ -95,6 +95,9 @@
       transparent 90%
     );
   }
+  #glow-hero-1, #glow-hero-2, #glow-cards-1, #glow-cards-2, #glow-about-1, #glow-about-2 {
+    @apply overflow-hidden;
+  }
   /* Círculo para ícones */
   .icon-circle {
     @apply flex items-center justify-center w-16 h-16 rounded-full bg-base-200;
