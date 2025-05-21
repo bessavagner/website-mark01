@@ -1,5 +1,5 @@
 <!-- templates/includes/services.html -->
-<div class="relative flex justify-center items-center w-full h-full bg-base-200 px-6 py-20">
+<div class="relative flex justify-center w-full h-full bg-base-200 px-6 py-5">
 
     <div id="glow-services-1" class="absolute bottom-80 md:bottom-20 right-10 w-[250px] h-[300px] md:w-[960px] md:h-[960px] rounded-full blur-3xl opacity-70
           pointer-events-none glow-primary z-30">
@@ -16,14 +16,14 @@
     <div id="circle-services-2" class="absolute bottom-10 right-30 w-[600px] h-[600px] rounded-full border border-base-100 opacity-30
           transform -translate-x-1/2 -translate-y-1/2 pointer-events-none z-40">
     </div>
-    <div class="max-w-6xl mx-auto space-y-4 z-40">
+    <div class="max-w-5xl mx-auto space-y-2 z-40">
 
-    <h2 class="text-2xl font-bold text-center text-neutral mb-16">
+    <h2 class="text-2xl font-bold text-center text-neutral montserrat-400 mb-16">
         Nossos Serviços
     </h2>
         <!-- COMPONENTE GENÉRICO: .service-item -->
         <!-- Sites Sob Medida (imagem à esquerda em desktop) -->
-        <div class="card glass service-item grid md:grid-cols-2 gap-12 items-center p-6">
+        <div class="service-item grid md:grid-cols-2 gap-8 items-center p-2">
           <!-- Imagem -->
           <div class="flex justify-center">
             <img src="{{ static('images/service_custom_site_nobg.png') }}"
@@ -42,7 +42,7 @@
         </div>
       
         <!-- Performance & SEO (imagem à direita em desktop) -->
-        <div class="card glass service-item grid md:grid-cols-2 gap-12 items-center p-6">
+        <div class="service-item grid md:grid-cols-2 gap-8 items-center p-2">
           <!-- Imagem (reordenada em desktop) -->
           <div class="flex justify-center md:order-2">
             <img src="{{ static('images/service_performance_nobg.png') }}"
@@ -61,7 +61,7 @@
         </div>
       
         <!-- Segurança & Suporte (imagem à esquerda em desktop) -->
-        <div class="card glass service-item grid md:grid-cols-2 gap-12 items-center p-6">
+        <div class="service-item grid md:grid-cols-2 gap-8 items-center p-2">
           <!-- Imagem -->
           <div class="flex justify-center">
             <img src="{{ static('images/service_security_nobg.png') }}"
