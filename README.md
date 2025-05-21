@@ -47,23 +47,28 @@ website-mark01
 │   │   ├── settings.py
 │   │   ├── utils.py
 │   │   └── views.py
-│   ├── tailwindcss
+│   ├── static
+│   │   ├── css
+│   │   │   ├── input.css
+│   │   │   ├── package.json
+│   │   │   ├── package-lock.json
+│   │   │   ├── styles.css
+│   │   │   └── tailwind.config.js
+│   │   ├──  js
+│   │   │    └── home.js
+│   ├── templates
+│   │   ├── includes
+│   │   │   └── hero.html
+│   │   ├── base.html
+│   │   ├── colors.html
+│   │   └── home.html
 │   └── main.py
-├── templates
-│   ├── base.html
-│   └── home.html
-├── static
-│   ├── css
-│   │   └── output.css
-│   └── js
-│       └── home.js
-├── scripts
-│   ├── build.sh
-│   └── entrypoint.sh
+├── build.sh
 ├── Dockerfile
-├── .env
+├── entrypoint.sh
 ├── .sample.env
 ├── pyproject.toml
+├── poetry.lock
 └── README.md
 ```
 
