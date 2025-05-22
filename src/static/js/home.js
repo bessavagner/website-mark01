@@ -1,3 +1,5 @@
+import { GlowFactory } from './modules/glows.js';
+
 document.addEventListener("DOMContentLoaded", () => {
   const observer = new IntersectionObserver((entries, observerInstance) => {
     entries.forEach((entry) => {
@@ -23,4 +25,5 @@ document.addEventListener("DOMContentLoaded", () => {
   document.querySelectorAll("[data-animate-on-view]").forEach((section) => {
     observer.observe(section);
   });
+  new GlowFactory({sectionSelector: 'section', glowsPerSection: 3, containerId: 'glow-container'}).init(); 
 });

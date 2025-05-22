@@ -3,29 +3,30 @@
 {% block title %}Meu site{% endblock %}
 
 {% block content %}
-<div class="flex flex-col justify-center items-center">
-    <div id="home-content" class="flex flex-col items-center w-full">
+<div class="relative flex flex-col justify-center items-center overflow-y-clip">
+    {% include './includes/glows.html' %}
+    <div id="home-content" class="flex flex-col items-center w-full bg-base-200">
         <section id="hero-section" class="relative mt-[64px]">
-                {% include './includes/hero.html' %}
+            {% include './includes/hero.html' %}
             <div id="arrow-section-cards"></div>
         </section>
         <section id="cards-section" class="relative -mt-20 md:mt-0" data-animate-on-view>
-                {% include './includes/cards.html' %}
+            {% include './includes/cards.html' %}
             <div id="arrow-section-about"></div>
         </section>
         <section id="about-section" class="relative" data-animate-on-view>
-                {% include './includes/about.html' %}
+            {% include './includes/about.html' %}
             <div id="arrow-section-services"></div>
         </section>
         <section id="services-section" class="relative" data-animate-on-view>
-                {% include './includes/services.html' %}
+            {% include './includes/services.html' %}
             <div id="arrow-section-contact"></div>
         </section>
-        <section id=""contact-section" class="relative" data-animate-on-view>
-                {% include './includes/contact.html' %}
+        <section id="contact-section" class="relative" data-animate-on-view>
+            {% include './includes/contact.html' %}
         </section>
     </div>
 </div>
 
-<script type="module" src="{{ static('js/home.js?version=5') }}"></script>
+<script type="module" src="{{ static('js/home.js?version=10') }}"></script>
 {% endblock %}

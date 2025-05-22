@@ -6,7 +6,7 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Título do meu site{% endblock %}</title>
-        <link href="{{ static('css/styles.css?version=14') }}" rel="stylesheet">
+        <link href="{{ static('css/styles.css?version=20') }}" rel="stylesheet">
         <meta name="description"
             content="">
         <meta name="keywords"
@@ -36,7 +36,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     </head>
 
-    <body class="font-base overflow-x-hidden">
+    <body class="overflow-x-hidden">
         {% block header %}{% include 'includes/header.html' %}{% endblock %}
         {% block content %}{% endblock %}
         {% block footer %}{% include 'includes/footer.html' %}{% endblock %}
