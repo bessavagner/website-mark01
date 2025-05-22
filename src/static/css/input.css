@@ -45,7 +45,7 @@
 
 @layer components {
   section {
-    @apply relative flex items-center md:h-[calc(100vh-64px)] w-full overflow-x-hidden;
+    @apply relative flex items-center md:h-[calc(100vh-64px)] w-full;
   }
 }
 
@@ -137,7 +137,7 @@
   #glow-services-2,
   #glow-contact-1,
   #glow-contact-2 {
-    @apply overflow-hidden;
+    @apply overflow-x-hidden;
   }
   /* Círculo para ícones */
   .icon-circle {
